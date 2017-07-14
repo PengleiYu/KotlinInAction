@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
 //    parsePath(path)
 
     println(kotlinLogo.trimMargin("."))
+    println(kotlinLogo2.trimIndent())
     println("""c:\adhf\asdlf\sdfj""")
     println(hello.trimMargin("."))
     println(price1)
@@ -54,6 +55,10 @@ fun parsePathRegexp(path: String) {
 val kotlinLogo = """| //
                     .|//
                     .|/ \"""
+val kotlinLogo2 = """
+                    | //
+                    |//
+                    |/ \"""
 val hello =
         """Hello
         .world"""
