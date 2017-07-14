@@ -3,7 +3,7 @@ package chapter03;
 import java.util.Arrays;
 import java.util.List;
 
-import static chapter03.Chapter3_2Kt.*;
+import static chapter03.Ch3_2Kt.*;
 
 
 /**
@@ -18,8 +18,8 @@ public class test {
      * 调用扩展函数
      */
     private static void test3_3() {
-        System.out.println(Chapter3_3Kt.lastChar("Hello"));
-        System.out.println(Chapter3_3Kt.joinToString(Arrays.asList(1, 2, 3, 4, 5)));
+        System.out.println(Ch3_3Kt.lastChar("Hello"));
+        System.out.println(Ch3_3Kt.joinToString(Arrays.asList(1, 2, 3, 4, 5)));
     }
 
     /**
