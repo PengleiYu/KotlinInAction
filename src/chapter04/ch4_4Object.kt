@@ -3,6 +3,7 @@ package chapter04
 import java.io.File
 
 /**
+ * object, 伴生对象，对象表达式
  * Created by yupenglei on 17/7/14.
  */
 class Person
@@ -90,7 +91,8 @@ fun test442() {
  * 伴生对象是个常规对象
  */
 class Person3(val name: String) {
-    companion object Loader {//为伴生对象添加名字
+    companion object Loader {
+        //为伴生对象添加名字
         fun fromJson(josn: String): Person3 = Person3("")
     }
 }
@@ -98,4 +100,14 @@ class Person3(val name: String) {
 fun main(args: Array<String>) {
 //    testPerson()
     test442()
+}
+
+/**
+ * 对象表达式
+ * 匿名内部类
+ */
+val obj = object : Runnable {
+    override fun run() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
