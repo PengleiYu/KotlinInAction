@@ -74,6 +74,28 @@ var StringBuilder.theLastChar: Char
     get() = get(length - 1)
     set(c) = set(length - 1, c)
 
+/**
+ * 三个扩展函数let,with,apply
+ * let接受一个以接收者为参数的lambda，并将接收者作为参数传入执行
+ * with接受一个空参lambda，将其作为接收者的扩展函数，并执行
+ * apply类似with，但最后会返回接收者
+ */
+private fun test1() {
+    val v1 = "Hello"
+    val res1 = v1.let {
+        //v1作为参数传入
+        println("v1=$it, len=${it.length}")
+    }
+    val res2 = with(v1) {
+        //该函数作为扩展函数被v1调用
+        println("v1=$this, len=$length")
+    }
+    val res3 = v1.apply {
+        //返回自身
+        println("v1=$this, len=$length")
+    }
+    println("${res1.javaClass.name} ${res2.javaClass.name} ${res3.javaClass.name}")
+}
 
 fun main(args: Array<String>) {
 //    println("123".lastChar())
@@ -85,8 +107,9 @@ fun main(args: Array<String>) {
 
 //    println("Hello".lastChar())
 //    println("Hello".theLastChar)
-    val sb = StringBuilder("Kotlin?")
-    println(sb)
-    sb.theLastChar = '!'
-    println(sb)
+//    val sb = StringBuilder("Kotlin?")
+//    println(sb)
+//    sb.theLastChar = '!'
+//    println(sb)
+    test1()
 }
