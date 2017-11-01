@@ -48,6 +48,13 @@ private fun test3() {
  * todo
  */
 
+private fun test4() {
+    fun curriedConverter(f: Double, b: Double) = { x: Double -> x * f + b }
+    val convertCtoF = curriedConverter(9.0 / 5, 32.0)
+    println("C: 100 => F: ${convertCtoF(100.0)}")
+
+}
+
 fun main(args: Array<String>) {
-    test3()
+    test4()
 }
