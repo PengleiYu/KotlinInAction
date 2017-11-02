@@ -1,4 +1,4 @@
-package chapter11_DSL.simpleHtmlDSL
+package chapter11_DSL.ch11_3InvokeScheme
 
 import chapter03.joinToString
 

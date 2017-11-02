@@ -1,4 +1,4 @@
-package chapter11_DSL
+package chapter11_DSL.ch11_3InvokeScheme
 
 /**
  * 使用invoke约定构建更灵活的代码块嵌套
